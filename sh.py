@@ -262,7 +262,7 @@ def siderMembers(to, mid):
                 textx += "%i. " % (num)
                 num=(num+1)
             else:
-                try:
+                # try:
                 #     # no = "\n╚══[ {} ]".format(str(cl.getGroup(to).name))
                 # except:
                 #     no = "\n╚══[ Success ]"
