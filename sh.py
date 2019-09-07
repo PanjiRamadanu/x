@@ -251,15 +251,15 @@ def siderMembers(to, mid):
         no = 1
         num = 2
         for i in mid:
-            mention = "x\n"
+            mention = "@x\n"
             slen = str(len(textx))
-            elen = str(len(textx) + len(mention) )
+            elen = str(len(textx) + len(mention) - 1)
             arrData = {'S':slen, 'E':elen, 'M':i}
             arr.append(arrData)
             textx += mention+wait["mention"]
             if no < len(mid):
                 no += 1
-                textx += "%i. " % (num)
+                # textx += "%i. " % (num)
                 num=(num+1)
             else:
                 try:
