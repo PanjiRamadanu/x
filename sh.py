@@ -257,15 +257,15 @@ def siderMembers(to, mid):
             arrData = {'S':slen, 'E':elen, 'M':i}
             arr.append(arrData)
             textx += mention+wait["mention"]
-            # if no < len(mid):
-                # no += 1
-                # textx += "%i. " % (num)
-                # num=(num+1)
-            # else:
-            #     try:
-            #         no = "\n╚══[ {} ]".format(str(cl.getGroup(to).name))
-            #     except:
-            #         no = "\n╚══[ Success ]"
+            if no < len(mid):
+                no += 1
+                textx += "%i. " % (num)
+                num=(num+1)
+            else:
+                try:
+                    no = "\n╚══[ {} ]".format(str(cl.getGroup(to).name))
+                except:
+                    no = "\n╚══[ Success ]"
         cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
