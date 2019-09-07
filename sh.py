@@ -147,7 +147,7 @@ wait = {
             "statusMessage": ""
             },
     "unsend":False,
-    "mention":"\nShow Status Sider",
+    "mention":"\nIn Background Members",
     "Respontag":"Terimakasih sudah ditag\n\n\n[AUTO RESPON]",
     "welcome":"WELLCOME...! \nBudayakan aktif di grup\nJangan sider\nJangan baper\n\n\n[Auto respon]",
     "leave":"Selamat tinggal sobat\nsemoga ktmu di lain hari nanti",
@@ -248,7 +248,7 @@ def siderMembers(to, mid):
         arrData = ""
         textx = format(str(len(mid)))
         arr = []
-        no = 1
+        no = 2
         num = 2
         for i in mid:
             mention = "@x\n"
