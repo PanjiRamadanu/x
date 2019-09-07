@@ -147,7 +147,7 @@ wait = {
             "statusMessage": ""
             },
     "unsend":False,
-    "mention":"\nShow Status Members Sider",
+    "mention":"\nShow Status Sider",
     "Respontag":"Terimakasih sudah ditag\n\n\n[AUTO RESPON]",
     "welcome":"WELLCOME...! \nBudayakan aktif di grup\nJangan sider\nJangan baper\n\n\n[Auto respon]",
     "leave":"Selamat tinggal sobat\nsemoga ktmu di lain hari nanti",
