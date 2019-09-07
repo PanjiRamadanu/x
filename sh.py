@@ -147,12 +147,12 @@ wait = {
             "statusMessage": ""
             },
     "unsend":False,
-    "mention":"Cie.......ɴɢɪɴᴛɪᴘ ʏᴀ\nawas mata nya kelilipan?",
-    "Respontag":"Jangan tag ntar situ ange!\n\n\n[AUTO RESPON]",
-    "welcome":"WELLCOME...! \nBudayakan typing di grup\nJangan sider\nJangan baper\n\n\n[Auto respon]",
-    "leave":"Slamat tinggal sobat\nsmoga ktmu di lain hari nanti",
-    "comment":"SHIRO was here",
-    "message":"Cieee nge add bot, awas terlalu lama kenal bot bisa baper\n\nвστ вy:SHIRO",
+    "mention":"\nShow Status Members Sider",
+    "Respontag":"Terimakasih sudah ditag\n\n\n[AUTO RESPON]",
+    "welcome":"WELLCOME...! \nBudayakan aktif di grup\nJangan sider\nJangan baper\n\n\n[Auto respon]",
+    "leave":"Selamat tinggal sobat\nsemoga ktmu di lain hari nanti",
+    "comment":"Panji was here",
+    "message":"Terimakasih sudah add bot\n\nвστ вy:Panji Ramadanu-SELFBOT",
 }
 read = {
     "readPoint":{},
@@ -251,7 +251,7 @@ def siderMembers(to, mid):
         no = 1
         num = 2
         for i in mid:
-            mention = "@x\n"
+            mention = "x\n"
             slen = str(len(textx))
             elen = str(len(textx) + len(mention) - 1)
             arrData = {'S':slen, 'E':elen, 'M':i}
@@ -1911,12 +1911,12 @@ def bot(op):
                                   cl.sendMessage(msg.to, "「 Status 」\nBerhasil diaktifkan\n\n• Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]"+"\n• Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d'))
                                   del cctv['point'][msg.to]
                                   del cctv['sidermem'][msg.to]
-                                  del cctv['cyduk'][msg.to]
+                                  # del cctv['cyduk'][msg.to]
                               except:
                                   pass
                               cctv['point'][msg.to] = msg.id
                               cctv['sidermem'][msg.to] = ""
-                              cctv['cyduk'][msg.to]=True
+                              # cctv['cyduk'][msg.to]=True
 
                         elif cmd == "sider off":
                           if wait["selfbot"] == True:
@@ -3433,7 +3433,7 @@ def bot(op):
 
                         elif text.lower() == "cek sider":
                             if msg._from in admin:
-                               cl.sendMessage(msg.to, "「 Status Sider 」\nSider Msg mu :\n\n" + str(wait["mention"]))
+                               cl.sendMessage(msg.to, "「 Status Sider 」\nSider Message :\n\n" + str(wait["mention"]))
 
     except Exception as error:
         print (error)
