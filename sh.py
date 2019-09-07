@@ -249,7 +249,7 @@ def siderMembers(to, mid):
         textx = format(str(len(mid)))
         arr = []
         no = 1
-        num = 2
+        # num = 2
         for i in mid:
             mention = "@x\n"
             slen = str(len(textx))
@@ -259,8 +259,8 @@ def siderMembers(to, mid):
             textx += mention+wait["mention"]
             if no < len(mid):
                 no += 1
-                textx += "%i. " % (num)
-                num=(num+1)
+                # textx += "%i. " % (num)
+                # num=(num+1)
             else:
                 try:
                     no = "\n╚══[ {} ]".format(str(cl.getGroup(to).name))
@@ -275,8 +275,8 @@ def welcomeMembers(to, mid):
         arrData = ""
         textx = "「 Auto Welcome 」\nɦαℓℓσ.......  ".format(str(len(mid)))
         arr = []
-        # no = 1
-        # num = 2
+        no = 1
+        num = 2
         for i in mid:
             ginfo = cl.getGroup(to)
             mention = "@x\n"
@@ -285,15 +285,15 @@ def welcomeMembers(to, mid):
             arrData = {'S':slen, 'E':elen, 'M':i}
             arr.append(arrData)
             textx += mention+wait["welcome"]+" Di "+str(ginfo.name)
-            # if no < len(mid):
-                # no += 1
-                # textx += "%i " % (num)
-                # num=(num+1)
-            # else:
-            #     try:
-            #         no = "\n╚══[ {} ]".format(str(cl.getGroup(to).name))
-            #     except:
-            #         no = "\n╚══[ Success ]"
+            if no < len(mid):
+                no += 1
+                textx += "%i " % (num)
+                num=(num+1)
+            else:
+                try:
+                    no = "\n╚══[ {} ]".format(str(cl.getGroup(to).name))
+                except:
+                    no = "\n╚══[ Success ]"
         cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
