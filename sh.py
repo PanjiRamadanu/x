@@ -686,7 +686,7 @@ def bot(op):
                         siderMembers(op.param1, [op.param2])
                         sider = cl.getContact(op.param2).picturePath
                         image = 'http://dl.profile.line.naver.jp'+sider
-                        cl.sendImageWithURL(op.param1, image)
+                        # cl.sendImageWithURL(op.param1, image)
 
         if op.type == 26:
            if wait["selfbot"] == True:
@@ -1911,12 +1911,12 @@ def bot(op):
                                   cl.sendMessage(msg.to, "「 Status 」\nBerhasil diaktifkan\n\n• Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]"+"\n• Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d'))
                                   del cctv['point'][msg.to]
                                   del cctv['sidermem'][msg.to]
-                                  # del cctv['cyduk'][msg.to]
+                                  del cctv['cyduk'][msg.to]
                               except:
                                   pass
                               cctv['point'][msg.to] = msg.id
                               cctv['sidermem'][msg.to] = ""
-                              # cctv['cyduk'][msg.to]=True
+                              cctv['cyduk'][msg.to]=True
 
                         elif cmd == "sider off":
                           if wait["selfbot"] == True:
