@@ -22,8 +22,8 @@ from googletrans import Translator
 #import youtube_dl
 #import pyimgflip
 
-#cl = LineClient()
-cl = LineClient(authToken='EIspzgIHH3QP7ypp3j75.D5EA5YJAo6RETGYB4MzKTq.0Df7asx950BscXV3j19QWKyeQEG/XMEU2c9GxKe+9bY=')
+cl = LineClient()
+#cl = LineClient(authToken='EIspzgIHH3QP7ypp3j75.D5EA5YJAo6RETGYB4MzKTq.0Df7asx950BscXV3j19QWKyeQEG/XMEU2c9GxKe+9bY=')
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
 cl.log("Channel Access Token : " + str(channel.channelAccessToken))
