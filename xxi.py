@@ -19,7 +19,7 @@ import wikipedia,goslate
 import ffmpy
 from bs4 import BeautifulSoup
 from googletrans import Translator
-import youtube_dl
+#import youtube_dl
 #import pyimgflip
 
 #cl = LineClient()
