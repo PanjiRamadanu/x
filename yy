@@ -18,7 +18,7 @@ import html5lib,shutil
 import wikipedia,goslate
 from bs4 import BeautifulSoup
 from googletrans import Translator
-import youtube_dl
+#import youtube_dl
 #import pyimgflip
 
 cl = LineClient(authToken='Ez60Kr7pxC8o9GxkLqB8.A8QfZVnpYoWok0wEf543ca.lIaKxF56gf4LY5mB1rH+7j3Q+tc4NxTpU37NCHCDGeI=')
